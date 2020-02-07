@@ -137,11 +137,29 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   width: 800px;
 }
-@header = "header";
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 370px;
+    margin: 0 auto;
+    margin: 1% auto 1% auto;
+  }
+}
+html {
+  background-color: #E9ECEF;
+}
+.text-center {
+  margin: 0 auto;
+}
 .nav-bar {
   display: flex;
   justify-content: flex-end;
   margin: 15px 0 25px 0;
+}
+@media (max-width: 500px) {
+  .nav-bar {
+    justify-content: space-around;
+  }
 }
 .nav-bar a {
   margin: 0 15px 0 15px;
@@ -151,21 +169,39 @@ body {
 }
 .top-box {
   background: #E9ECEF;
-  width: 100%;
+  width: 99%;
   padding: 25px 15px 25px 15px;
   font-weight: 500;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 20px;
+  display: block;
+}
+@media (max-width: 500px) {
+  .top-box {
+    display: block;
+    width: 100%;
+  }
 }
 .top-box img {
   margin-top: 20px;
   margin-left: 15px;
 }
+@media (max-width: 500px) {
+  .top-box img {
+    margin: 0 auto;
+    width: 250px;
+    width: 1vw;
+    height: auto;
+  }
+}
 .top-box h1 {
   font-size: 60px;
   margin-bottom: 15 px;
-  border-bottom: 1px #d3cccc;
+  border-bottom: 1px #E9ECEF;
+}
+@media (max-width: 500px) {
+  .top-box h1 {
+    font-size: 32px;
+  }
 }
 .top-box h5 {
   font-size: 24px;
@@ -173,6 +209,11 @@ body {
   margin-bottom: 15px;
   border-bottom: lightgrey 1px solid;
   padding-bottom: 25px;
+}
+@media (max-width: 500px) {
+  .top-box h5 {
+    text-align: center;
+  }
 }
 .top-box .invitation {
   font-size: 20px;
@@ -190,10 +231,25 @@ body {
 .body-box {
   font-size: 18px;
 }
+@media (max-width: 500px) {
+  .body-box {
+    display: block;
+  }
+}
 .body-box .body-content {
   display: inline-block;
   width: 49%;
   vertical-align: top;
+}
+@media (max-width: 500px) {
+  .body-box .body-content {
+    display: block;
+    width: 100%;
+    font-size: smaller;
+    padding-bottom: 15px;
+    text-align: left;
+    justify-self: center;
+  }
 }
 .body-box .body-content h2 {
   font-size: 36px;
@@ -204,11 +260,11 @@ body {
   font-weight: bold;
 }
 .body-box .body-content ul {
-  border: 1px lightgrey solid;
+  border: 1px #E9ECEF solid;
 }
 .body-box .body-content ul li {
   margin: 5px 0 5px 0;
-  border-bottom: 1px lightgrey solid;
+  border-bottom: 1px #E9ECEF solid;
   padding-left: 5px;
   padding-top: 5px;
   padding-bottom: 10px;
@@ -225,6 +281,19 @@ body {
   width: 100%;
   padding-top: 5px;
   margin-top: 10px;
+  border-collapse: collapse;
+}
+@media (max-width: 500px) {
+  .body-box table th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+}
+@media (max-width: 500px) {
+  .body-box table {
+    display: block;
+  }
 }
 .body-box table tr:nth-child(odd) {
   background-color: #FFFFFF;
@@ -249,4 +318,14 @@ body {
   text-align: center;
   color: white;
   padding: 35px 0 30px 0;
+}
+@media (max-width: 500px) {
+  .body-box .footer {
+    font-size: smaller;
+    line-height: inherit;
+    color: lightgray;
+  }
+}
+.body-box .footer address {
+  text-align: left;
 }
